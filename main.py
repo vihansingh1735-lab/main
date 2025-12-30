@@ -9,7 +9,23 @@ import os
 import re
 import random
 
+from flask import Flask
+from threading import Thread
 
+app = Flask("")
+
+@app.route("/")
+def home():
+    return "Bot is alive!"
+
+def run():
+    app.run(host="0.0.0.0", port=10000)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+
+keep_alive()
 CONFIG_FILE = "modbot_config.json"
 WARNINGS_FILE = "user_warnings.json"
 BAD_WORDS = [
