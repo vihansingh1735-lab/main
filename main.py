@@ -11,7 +11,8 @@ import random
 import os
 from flask import Flask
 from threading import Thread
-
+import os
+os.environ["DISCORD_DISABLE_VOICE"] = "1"
 app = Flask("")
 
 @app.route("/")
