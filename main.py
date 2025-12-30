@@ -1,4 +1,5 @@
-import discord
+import os
+os.environ["DISCORD_DISABLE_VOICE"] = "1"import discord
 from discord.ext import commands, tasks
 from discord import ui, ButtonStyle, app_commands
 from datetime import datetime, timedelta
@@ -8,11 +9,9 @@ import asyncio
 import os
 import re
 import random
-import os
 from flask import Flask
 from threading import Thread
-import os
-os.environ["DISCORD_DISABLE_VOICE"] = "1"
+
 app = Flask("")
 
 @app.route("/")
