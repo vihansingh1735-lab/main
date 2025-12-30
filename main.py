@@ -18,6 +18,8 @@ app = Flask("")
 def home():
     return "Bot is alive!"
 
+print("TOKEN VALUE:", os.getenv("token"))
+
 def run():
     app.run(host="0.0.0.0", port=10000)
 
