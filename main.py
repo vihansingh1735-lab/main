@@ -1840,4 +1840,4 @@ class SetupView(ui.View):
         await interaction.response.send_message(embed=ack_embed(interaction.user, "Configuration saved."), ephemeral=True)
         await self.bot.log_action(interaction.guild, "Setup Saved", interaction.user, interaction.user, "Bot configuration updated via Setup panel.", 0x2ECC71)
         
-bot.run("MTQ1NTU5Njc2NjE1NzIwOTg1Ng.GR5VPg.tjNbOgSR13lMYLNlh4untHk5TKlAUIxIDH_PQw")
+bot.run("token")
